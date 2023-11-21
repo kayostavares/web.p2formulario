@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Aulas Online</title>
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/Luann8/To-Do-List-ou-Lista-de-Tarefas/main/1f4dc.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="scriptsheet" type="text/script" href="script.js">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+       
+</head>
+
+<body>
+
+<header>  
+        <h2>Inscreva-se ou entre contato para aulas com a Prof Maria.</h2>
+        <button onclick="toggleDarkMode()">Dark Mode</button>
+    </div>
+    
+</header>
+
+    <div id="schedule">
+
+    <div id="contact-form">
+        <h1>Entre em Contato</h1>
+        <form action="#" method="post">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </div>
+</div>
+
+    <div id="schedule">
+        <h1>📅 Agenda de Aulas Online:</h1>
+        <div class="add-lesson-section">
+            <br>
+    
+            <label for="day">Dia da Semana:</label>
+            <select id="day">
+                <option value="Segunda">Segunda-feira</option>
+                <option value="Terça">Terça-feira</option>
+                <option value="Quarta">Quarta-feira</option>
+                <option value="Quinta">Quinta-feira</option>
+                <option value="Sexta">Sexta-feira</option>
+            </select>
+            <br>
+    
+            <label for="time">Horário:</label>
+            <select id="time"></select>
+            <br>
+    
+            <label for="type">Tipo de Aula:</label>
+            <select id="type">
+                <option value="individual">Individual</option>
+                <option value="group">Grupo (até 5 pessoas)</option>
+            </select>
+            <br>
+    
+            <button id="add-lesson-button" onclick="addLesson()">Agendar</button>
+        </div>
+    
+        <hr>
+    
+        <div class="filter-section">
+            <div class="filter-label">
+                <strong>Filtrar por Dia:</strong>
+            </div>
+            <div class="filter-options">
+                <button class="filter-button active" onclick="filterLessons('all')">Todos</button>
+                <button class="filter-button" onclick="filterLessons('Segunda')">Segunda</button>
+                <button class="filter-button" onclick="filterLessons('Terça')">Terça</button>
+                <button class="filter-button" onclick="filterLessons('Quarta')">Quarta</button>
+                <button class="filter-button" onclick="filterLessons('Quinta')">Quinta</button>
+                <button class="filter-button" onclick="filterLessons('Sexta')">Sexta</button>            
+            </div>
+        </div>
+    
+        <hr>
+    
+        <div id="lessons">
+            <!-- Aulas serão exibidas aqui -->
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Professora Maria</p>
+        </div>
+    </footer>
+    
+  
+</body>
+
+</html>
